@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Codificador de Mensagens</title>
+</head>
+
+<body>
+    <main class="container">
+
+        <h1>Codifique suas mensagens!</h1>
+
+        <form id="formulario">
+            <div id="inputMensagem">
+                <textarea id="mensagem" cols="10" rows="4" placeholder="Insira sua mensagem aqui..."></textarea>
+            </div>
+            <div id="areaCentral">
+                <div id="botoes">
+                    <div id="cifra">
+                        <select name="cifraSelection" id="cifraSelection">
+                            <option value='' disabled selected>Selecione o tipo de código</option>
+                            <option value="cesar">Cifra de César</option>
+                            <option value="base64">Base 64</option>
+                        </select>
+                    </div>
+
+                    <div id="inputChaveCesar">
+                        <label for="chaveCesar">Insira um incremento de 1 a 25</label>
+                        <input type="number" id="chaveCesar" value="1" min="0" max="25">
+                    </div>
+
+                    <div id="radio">
+                        <div id="areaCodificar">
+                            <input type="radio" id="codificar" name="responseType" value="codificar">
+                            <label for="codificar">Codificar</label>
+                        </div>
+
+                        <div id="areaDecoficar">
+                            <input type="radio" id="decodificar" name="responseType" value="decodificar">
+                            <label for="decodificar">Decodificar</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="resposta">
+                <div id="paragrafoResposta">
+                    <label for="resultado">Resultado</label>
+                    <textarea name="textoResposta" id="textoResposta" cols="10" rows="4"
+                        placeholder="Sua mensagem aparecerá aqui"></textarea>
+
+                    <button type="submit" id="botaoSubmit">Codifique ou Descodifique</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
